@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDoS Attack Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>DDoS Attack Detection using Machine Learning</h1>
+        <p><strong>Logistic Regression Accuracy:</strong> {{ log_reg_accuracy }}</p>
+        <p><strong>MLP Accuracy:</strong> {{ mlp_accuracy }}</p>
+
+        <h2>Confusion Matrices:</h2>
+        <img src="{{ url_for('static', filename='images/Logistic Regression_confusion_matrix.png') }}" alt="Logistic Regression Confusion Matrix">
+        <img src="{{ url_for('static', filename='images/MLP_confusion_matrix.png') }}" alt="MLP Confusion Matrix">
+
+        <h2>Accuracy Comparison:</h2>
+        <iframe src="{{ url_for('static', filename='images/accuracy_comparison.html') }}" width="100%" height="500px"></iframe>
+    </div>
+</body>
+</html>
